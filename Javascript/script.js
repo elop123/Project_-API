@@ -27,53 +27,69 @@ function displayData(results) {
     const container = document.getElementById('container');
     container.innerHTML = '';
 
-    
+    results.forEach(job => {
         const displayedData = document.createElement('div');
-        displayedData.className = 'myDiv';
-        
-        displayedData.innerHTML = `<fieldset>
-            <h2 class="gradient-text">One Search.<span> Millions of jobs<span></h2>
-            <input id="jobTitle" type="search" placeholder="Job Title">
-            <input id="location" type="search" placeholder="Location">
-            ${selectCategory.outerHTML}
-            <button id="searchBtn" onclick="searchBtn()">Search</button>
-            <p>${results[0].location.area[1]}</p>
-            </fieldset>
-             
+        displayedData.className = 'displayed';
+
+        displayedData.innerHTML = `
+             <fieldset class="box">
+            <h3>${job.title}</h3>
+            <p><strong>Company:</strong> ${job.company.display_name}</p>
+            <p><strong>Location:</strong> ${job.location.display_name}</p>
+            <p><strong>Salary:</strong> ${job.salary_min ? `£${job.salary_min} - £${job.salary_max}` : 'Not specified'}</p>
+            <p><strong>Description:</strong> ${job.description}</p>
+            <a href="${job.redirect_url}" target="_blank">View More</a>
+             </fieldset>
           `;  
     //Append div to the container
         container.appendChild(displayedData);  
 
-        const searchButton = document.getElementById('searchBtn');
-    searchButton.addEventListener('click', searchJobTitle);
-    };
-
-fetchData();
-
-function searchJobTitle() {
-    const jobTitle = document.getElementById('jobTitle');
-    
-    if (jobTitle.value.length > 3) {
-        const htmlResult = document.createElement('p');
-        container.appendChild(htmlResult);
-    } else {
-        console.log('Please enter at least 3 characters');
-    }
+    });
+        
 }
+fetchData();
+        
+
+        
+ function search(){
+    const inputElem = document.getElementById('');
+    const searchButton = document.getElementById('searchBtn');
+    searchButton.addEventListener('click', ()=>{
+      console.log('click');
+      
+    });
+    container.appendChild(searchButton); 
+    }
+   
+ 
+     
+    
+
+
+
+// function searchJobTitle() {
+//     const jobTitle = document.getElementById('jobTitle');
+    
+//     if (jobTitle.value.length > 3) {
+//         const htmlResult = document.createElement('p');
+//         container.appendChild(htmlResult);
+//     } else {
+//         console.log('Please enter at least 3 characters');
+//     }
+// }
 
      
 
-function searchBtn() {
-   //console.log('click');
-    };
+// function searchBtn() {
+//    //console.log('click');
+//     };
 
-// Create the select dropdown
-const selectCategory = document.createElement('select');
-selectCategory.id = 'jobCategory';
-selectCategory.innerHTML = `
-<option value="">Select a category</option>
-<option value="IT">IT</option>
-<option value="Finance">Finance</option>
-<option value="Marketing">Marketing</option>
-`;
-
+// // Create the select dropdown
+// const selectCategory = document.createElement('select');
+// selectCategory.id = 'jobCategory';
+// selectCategory.innerHTML = `
+// <option value="">Select a category</option>
+// <option value="IT">IT</option>
+// <option value="Finance">Finance</option>
+// <option value="Marketing">Marketing</option>
+// `;

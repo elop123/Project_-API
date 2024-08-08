@@ -18,27 +18,45 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <div>
-            <button>Log in</button>
-            <button>Sign up</button>
+            <button class="firstBtn">Log in</button>
+            <button class="secondBtn">Sign up</button>
         </div>
         
     </nav>
-    
+    <fieldset>
+        <h2>One Search.<span> Millions of jobs<span></h2>
+        <input id="jobTitle" type="search" class="title" placeholder="Job Title">
+        <input id="location" type="search" placeholder="Location">
+        <button id="searchBtn">Search</button>
+        <button class="deleteBtn">Delete</button>
+        </fieldset>
     <div id="container">
-
+      
     </div>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <p><a href="#">About</a></p>
-                <p><a href="#">Contact</a></p>
+    
+    <footer class="main-footer">
+            <div class="footer-section">
+                <h4>About us</h4>
+                <ul>
+                    <li>123 Job Street,</li>
+                    <li>Aalborg</li>
+                    <li> Denmark 4567</li>
+                    <li> info@jobfinder.com</li>
+                </ul>
             </div>
-            <div class="footer-address">
-                <p>123 Job Street,</p>
-                <p>Aalborg City, Denmark 4567</p>
-                <p>Email: info@jobfinder.com</p>
+            <div class="footer-section">
+                <h4>Sign up for our newsletter</h4>
+                <input type="text" placeholder ="Your email">
+            </div> 
+            <div class="footer-section">
+                <h4 class="follow">Follow us</h4>
+                <div class="social-icons">
+                    <img src="facebook.png" alt="Facebook">
+                    <img src="linkedin.png" alt="LinkedIn">
+                    <img src="youtube.png" alt="YouTube">
+                </div>
             </div>
-        </div>
+        
     </footer>
 </body>
 </html>
