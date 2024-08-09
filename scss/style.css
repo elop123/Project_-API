@@ -39,21 +39,21 @@ body {
 }
 .navbar ul li a {
   text-decoration: none;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   transition: color 0.3s ease;
 }
 .navbar ul li a:hover {
   text-decoration: underline;
-  color: hsl(120, 81%, 39%);
+  color: #13b413;
 }
 .navbar div .secondBtn {
-  background-color: white;
+  background-color: #ffffff;
   color: #2e8b57;
 }
 .navbar div button {
   background-color: #2e8b57;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 15px;
   padding: 0.5rem 0.8rem;
@@ -65,32 +65,27 @@ body {
   margin: 0.2rem;
 }
 .navbar div button:hover {
-  background-color: #3cb371;
+  background-color: #13b413;
   color: #ffffff;
 }
 
 fieldset {
-  height: 330px;
+  height: 300px;
   width: 390px;
   border: none;
   border-radius: 8px;
   box-shadow: 1px 2px 4px #bbf06c;
   display: block;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 1.5rem;
   margin-bottom: 20px;
-}
-fieldset .gradient-text {
-  color: #bbf06c;
-  box-shadow: 1px 2px 2px 2px;
-  border-radius: 15px;
 }
 fieldset h2 {
   padding-left: 10px;
   color: #96de2b;
 }
 fieldset span {
-  color: #0fa650;
+  color: #2e8b57;
 }
 fieldset input {
   border: 2px solid #96de2b;
@@ -103,21 +98,21 @@ fieldset .title {
   width: 316px;
 }
 fieldset select {
-  border: 2px solid rgb(150, 222, 43);
+  border: 2px solid #96de2b;
   border-radius: 8px;
   padding: 4px;
   margin-top: 0.5rem;
 }
 fieldset button {
   padding-top: 2rem;
-  width: 155px;
+  width: 130px;
   background-color: #2e8b57;
-  color: white;
+  color: #ffffff;
   border: none;
   border-radius: 15px;
   padding: 0.5rem 1rem;
-  margin-top: 10px;
-  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 13.3rem;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -126,21 +121,33 @@ fieldset button:hover {
   background-color: #3cb371;
   color: #ffffff;
 }
-fieldset .deleteBtn {
-  margin-top: 1rem;
-  margin-left: 0.18rem;
-  background-color: #bbf06c;
-}
-fieldset .deleteBtn:hover {
-  background-color: #e6c107;
-}
 
 .box {
   height: 100%;
 }
 
+.content .jobs-section h2 {
+  color: #2e8b57;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.content #jobResults {
+  width: 390px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 2px 4px #bbf06c;
+  display: block;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 20px;
+  padding: 1rem;
+}
+.content #jobResults hr {
+  background-color: #89db92;
+}
+
 .main-footer {
-  background-color: #2b8a2b;
+  background-color: #2e8b57;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -179,14 +186,71 @@ fieldset .deleteBtn:hover {
   border: 2px solid #bbf06c;
   border-radius: 8px;
 }
-.main-footer .footer-section .social-icons {
+.main-footer .footer-section button {
+  background-color: #3cb371;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  margin-left: 2.3rem;
+}
+.main-footer .social-icons {
   display: flex;
   align-items: center;
   margin-top: 1rem;
   padding-left: 2.5rem;
 }
-.main-footer .footer-section .social-icons img {
-  width: 40px;
-  height: 40px;
+.main-footer .social-icons img {
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  .navbar {
+    padding: 16px 24px;
+  }
+  .navbar h1 {
+    font-size: 2rem;
+  }
+  .navbar ul li a {
+    font-size: 1.25rem;
+  }
+  .main-fieldset {
+    width: 900px;
+    height: 350px;
+  }
+  .main-fieldset h2 {
+    font-size: 3rem;
+  }
+  .main-fieldset input {
+    margin-left: 0.4rem;
+    padding: 10px;
+  }
+  .main-fieldset .title {
+    width: 346px;
+  }
+  .main-fieldset select {
+    margin-left: 0.4rem;
+    padding: 10px;
+  }
+  .main-fieldset .mainBtn {
+    margin-left: 45rem;
+    margin: auto;
+  }
+  .main-fieldset .mainBtn:hover {
+    background-color: #3cb371;
+    color: #ffffff;
+  }
+  fieldset {
+    width: 900px;
+    height: 100%;
+  }
+  .content #jobResults {
+    width: 900px;
+  }
 }

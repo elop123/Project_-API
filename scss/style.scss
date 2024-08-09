@@ -3,11 +3,11 @@
 @import './helpers/variables';
 
 body{
-    font-family: "Poppins", sans-serif;
+    font-family: $font-family;
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #eff5f0;
+    background-color: $background-color;
 }
 
 .navbar {
@@ -15,9 +15,9 @@ body{
     align-items: center; 
     justify-content: center; 
     padding: 8px 12px; 
-    background-color: #bbf06c; 
+    background-color: $nav-color; 
     color: $text-color;
-    border-bottom: 1px solid #89db92; 
+    border-bottom: 1px solid $line-color; 
 
     img {
         width: 40px; 
@@ -27,8 +27,7 @@ body{
         font-size: 1.5rem;
         margin: 0;
         span{
-            color: #12c961;
-            
+            color: $main-color; 
         }
     }
     ul {
@@ -37,35 +36,28 @@ body{
         padding: 0;
         list-style: none; 
         margin-left: 5px;
-        
         li {
             margin: 0 17px;
-            
             a {
                 text-decoration: none; 
-                color: white; 
+                color: $text-color; 
                 font-size: 1rem;
                 transition: color 0.3s ease; 
-                
-
                 &:hover {
                     text-decoration: underline;
-                    color: hsl(120, 81%, 39%);
+                    color:$hover-color ;
                 }
             }
         }
     }
-   
     div{
-        
         .secondBtn{
-            background-color: white; 
-            color: #2e8b57; 
-            //margin-left: 1rem;
+            background-color: $text-color; 
+            color: $secondary_color; 
         }
         button {
-            background-color: #2e8b57; 
-            color: white; 
+            background-color: $secondary_color; 
+            color: $text-color; 
             border: none;
             border-radius: 15px;
             padding: 0.5rem 0.8rem; 
@@ -74,66 +66,58 @@ body{
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s ease, color 0.3s ease; 
-           margin: 0.2rem;
+            margin: 0.2rem;
             &:hover {
-                background-color: #3cb371; 
-                color: #ffffff; 
+                background-color: $hover-color; 
+                color: $text-color; 
             }
         }
     }
     
 }
 fieldset{
-    height: 330px;
+    height: 300px;
     width: 390px;
     border: none;
     border-radius: 8px;
     box-shadow: 1px 2px 4px #bbf06c ;
     display: block;
     margin: auto;
-   margin-top: 10px;
+   margin-top: 1.5rem;
    margin-bottom: 20px;
-   .gradient-text{
-    color:  #bbf06c;
-    box-shadow:1px  2px 2px 2px ; 
-    border-radius: 15px;
-    
-}
 h2{
     padding-left: 10px;
-    color:#96de2b;
+    color:$text-color2;
 }
 span{
-    color: #0fa650;
+    color: $secondary_color;
 }
 input{
-    border:2px solid #96de2b;
+    border:2px solid $text-color2;
     border-radius: 8px;
     padding:  4px;
     margin-left:1.5rem ;
     margin-top: 1rem;
-    
 }
 .title{
     width: 316px;
 }
-
 select{
-    border:2px solid rgb(150, 222, 43);
+    border:2px solid $text-color2;
     border-radius: 8px;
     padding: 4px;
     margin-top: 0.5rem;
 }
 button {
     padding-top: 2rem;
-    width:155px ;
-    background-color: #2e8b57; 
-    color: white; 
+    width:130px ;
+    background-color: $secondary_color; 
+    color: $text-color; 
     border: none;
     border-radius: 15px;
     padding: 0.5rem 1rem; 
-    margin-top: 10px;
-    margin-left: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 13.3rem;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease; 
@@ -142,27 +126,40 @@ button {
         color: #ffffff; 
     }
 }
-.deleteBtn{
-    margin-top: 1rem;
-    margin-left: 0.18rem;
-    background-color: #bbf06c;
-    &:hover{
-    background-color: #e6c107;
-    
-    }
-}
 }
 .box{
     height: 100%;
 }
+.content{
+    .jobs-section{
+        h2{
+            color: $secondary_color;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+    #jobResults{
+        width: 390px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 1px 2px 4px #bbf06c ;
+        display: block;
+        margin: auto;
+       margin-top: 1.5rem;
+       margin-bottom: 20px;
+       padding: 1rem;
+       hr{
+        background-color: $line-color;
+       }
+    }
+} 
 .main-footer {
-    background-color: #2b8a2b;
-    color: #ffffff;
+    background-color: $secondary_color;
+    color: $text-color;
     display: flex;
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
-   
     .footer-section {
         font-size: 13px;
         flex: 1;
@@ -191,26 +188,85 @@ button {
             padding: 0.3rem;
             margin: 1rem  2.5rem;
             margin-top: -1rem;
-            border: 2px solid #bbf06c;
+            border: 2px solid $nav-color;
             border-radius: 8px;
         }
+        button{
+            background-color: #3cb371;
+            border: none;
+            border-radius: 8px;
+            padding: 6px;
+            margin-left: 2.3rem;
+           }
+        }
     
-  
     .social-icons  {
         display: flex;
         align-items: center;
         margin-top: 1rem;
         padding-left: 2.5rem;
        img{
-        width: 40px;
-        height: 40px;
+        width: 25px;
+        height: 25px;
         margin-right: 10px;
+        display: flex;
+        align-items: center;
        }
     }
     
     }
-}
 
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px; 
+    }
+    .navbar {
+        padding: 16px 24px;
+        h1 {
+            font-size: 2rem; 
+        }
+        ul li a {
+            font-size: 1.25rem; 
+        }
+    }
+
+    .main-fieldset {
+        width: 900px; 
+        height: 350px; 
+        h2{
+            font-size: 3rem; 
+        }
+        input{
+            margin-left:0.4rem ; 
+            padding: 10px;
+        }
+        .title{
+            width: 346px;
+        }
+        select{
+           margin-left: 0.4rem;
+           padding: 10px;
+        }
+        .mainBtn {
+            margin-left: 45rem;
+            margin:auto;
+            &:hover {
+                background-color: #3cb371; 
+                color: #ffffff; 
+            }
+        }
+        }
+        fieldset{
+            width: 900px;
+            height: 100%;
+          }
+        .content{
+            #jobResults{
+                width: 900px;
+        }
+        }
+    
+    }
 
 
 

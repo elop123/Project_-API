@@ -18,22 +18,29 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <div>
-            <button class="firstBtn">Log in</button>
-            <button class="secondBtn">Sign up</button>
-        </div>
-        
+            <button type = "submit" class="firstBtn">Log in</button>
+            <button type = "submit" class="secondBtn">Sign up</button>
+        </div> 
     </nav>
-    <fieldset>
-        <h2>One Search.<span> Millions of jobs<span></h2>
-        <input id="jobTitle" type="search" class="title" placeholder="Job Title">
-        <input id="location" type="search" placeholder="Location">
-        <button id="searchBtn">Search</button>
-        <button class="deleteBtn">Delete</button>
-        </fieldset>
-    <div id="container">
-      
-    </div>
-    
+    <fieldset class="main-fieldset">
+        <h2>One search.<span> Millions of jobs<span></h2>
+        <form id="jobForm">
+        <input id="jobTitle" type="text" class="title" placeholder="Job Title">
+        <input id="location" type="text" placeholder="Location">
+        <select class="selectBtn" id="select">
+            <option value="">Choose a location</option>
+            <option value="UK">UK</option>
+        </select>
+        <button  class ="mainBtn" type="submit" id="searchBtn">Search</button>
+        </form>
+    </fieldset>
+    <main class="content">
+        <section class="jobs-section">
+            <h2>The Newest jobs</h2>
+        </section> 
+    <div id="jobResults"></div>
+    <div id="container"></div>
+    </main>
     <footer class="main-footer">
             <div class="footer-section">
                 <h4>About us</h4>
@@ -46,17 +53,17 @@
             </div>
             <div class="footer-section">
                 <h4>Sign up for our newsletter</h4>
-                <input type="text" placeholder ="Your email">
+                <input type="text" id="email-input" placeholder=" Your e-mail" >
+                <button type="submit" onclick="validateEmail()">Sign up</button>
             </div> 
             <div class="footer-section">
                 <h4 class="follow">Follow us</h4>
                 <div class="social-icons">
-                    <img src="facebook.png" alt="Facebook">
-                    <img src="linkedin.png" alt="LinkedIn">
-                    <img src="youtube.png" alt="YouTube">
+                    <img src="assets/images/facebook-app-symbol.png" alt="facebook">
+                    <img src="assets/images/instagram.png" alt="instagram">
+                    <img src="assets/images/twitter-sign.png" alt="twitter">
                 </div>
             </div>
-        
     </footer>
 </body>
 </html>
