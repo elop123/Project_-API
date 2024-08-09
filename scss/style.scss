@@ -252,7 +252,7 @@ button {
             margin:auto;
             &:hover {
                 background-color: #3cb371; 
-                color: #ffffff; 
+                color: $text-color; 
             }
         }
         }
@@ -265,6 +265,7 @@ button {
                 width: 900px;
         }
         }
+        
     
     }
 

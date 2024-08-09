@@ -55,6 +55,7 @@ fetchData();
     const inputElem = document.getElementById('jobTitle');
     const searchButton = document.getElementById('searchBtn');
     const jobResultsContainer = document.getElementById('jobResults');
+    
 
     function fetchJobs(jobTitle) {
         const url2 = 'https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=d013790e&app_key=8ece576edf6cc8a2c507d716437198cf';
@@ -84,7 +85,8 @@ fetchData();
                 }
             })
             .catch(error => {
-                jobResultsContainer.innerHTML = '<p>There is no jobs available at the moment. Please try again later.</p>';
+                jobResultsContainer.innerHTML = 
+                '<p>There is no jobs available at the moment. Please try again later.</p>';
                 console.error('Error fetching jobs:', error);
             });
     }

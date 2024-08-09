@@ -14,8 +14,8 @@
         <img src= "assets/images/portfolio.png" width="8%" alt="icon">
         <h1>JobFinder</h1>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#about">Contact</a></li>
         </ul>
         <div>
             <button type = "submit" class="firstBtn">Log in</button>
@@ -26,10 +26,12 @@
         <h2>One search.<span> Millions of jobs<span></h2>
         <form id="jobForm">
         <input id="jobTitle" type="text" class="title" placeholder="Job Title">
-        <input id="location" type="text" placeholder="Location">
+        <input id="location" type="text" placeholder="Region">
         <select class="selectBtn" id="select">
             <option value="">Choose a location</option>
             <option value="UK">UK</option>
+            <option value="DK">DK</option>
+            <option value="USA">USA</option>
         </select>
         <button  class ="mainBtn" type="submit" id="searchBtn">Search</button>
         </form>
@@ -37,13 +39,15 @@
     <main class="content">
         <section class="jobs-section">
             <h2>The Newest jobs</h2>
-        </section> 
-    <div id="jobResults"></div>
-    <div id="container"></div>
+        <div id="jobResults"></div>
+        </section>   
+        <div id="container">
+
+        </div>     
     </main>
     <footer class="main-footer">
             <div class="footer-section">
-                <h4>About us</h4>
+                <h4 id="about">About us</h4>
                 <ul>
                     <li>123 Job Street,</li>
                     <li>Aalborg</li>
